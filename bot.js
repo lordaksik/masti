@@ -34,7 +34,7 @@ bot.hears('/bot', async (ctx) => {
    
     }
     
-    if(mast1==3)
+    if(mast1==6)
     {ctx.reply('Буби не было 6 раздач')}
     //diamonds- буби
     //clubs - крести
