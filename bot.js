@@ -116,7 +116,7 @@ bot.hears('/bot', async (ctx) => {
    {ctx.reply('4 чирвы подряд')}
    
    
-   for (let i = 0; i < 8; i++) {
+   for (let i = 0; i < 10; i++) {
        score_dealer = data.items.results[i].results.card_dealer.suit
        score_player = data.items.results[i].results.card_player.suit
        
@@ -125,9 +125,9 @@ bot.hears('/bot', async (ctx) => {
    
    }
    
-   if(mastvertDil1==8)
-   {ctx.reply('Нет 8 буби у дилера (вертикаль)')}
-   for (let i = 0; i < 8; i++) {
+   if(mastvertDil1==10)
+   {ctx.reply('Нет 10 буби у дилера (вертикаль)')}
+   for (let i = 0; i < 10; i++) {
        score_dealer = data.items.results[i].results.card_dealer.suit
        score_player = data.items.results[i].results.card_player.suit
        
@@ -135,9 +135,9 @@ bot.hears('/bot', async (ctx) => {
        mastvertDil2=mastvertDil2+1;
    
    }
-   if(mastvertDil2==8)
+   if(mastvertDil2==10)
    {ctx.reply('Нет 8 крести у дилера (вертикаль)')}
-   for (let i = 0; i < 8; i++) {
+   for (let i = 0; i < 10; i++) {
        score_dealer = data.items.results[i].results.card_dealer.suit
        score_player = data.items.results[i].results.card_player.suit
        
@@ -146,9 +146,9 @@ bot.hears('/bot', async (ctx) => {
    
    }
    
-   if(mastvertDil3==8)
-   {ctx.reply('Нет 8 пик у дилера (вертикаль)')}
-   for (let i = 0; i < 8; i++) {
+   if(mastvertDil3==10)
+   {ctx.reply('Нет 10 пик у дилера (вертикаль)')}
+   for (let i = 0; i < 10; i++) {
        score_dealer = data.items.results[i].results.card_dealer.suit
        score_player = data.items.results[i].results.card_player.suit
        
@@ -156,9 +156,9 @@ bot.hears('/bot', async (ctx) => {
        mastvertDil4=mastvertDil4+1;
    
    }
-   if(mastvertDil4==8)
-   {ctx.reply('Нет 8 чирв у дилера (вертикаль)')}
-   for (let i = 0; i < 8; i++) {
+   if(mastvertDil4==10)
+   {ctx.reply('Нет 10 чирв у дилера (вертикаль)')}
+   for (let i = 0; i < 10; i++) {
        score_dealer = data.items.results[i].results.card_dealer.suit
        score_player = data.items.results[i].results.card_player.suit
        
@@ -166,9 +166,9 @@ bot.hears('/bot', async (ctx) => {
        mastvertPl1=mastvertPl1+1;
    
    }
-   if(mastvertPl1==8)
-   {ctx.reply('Нет 8 буби у игрока (вертикаль)')}
-   for (let i = 0; i < 8; i++) {
+   if(mastvertPl1==10)
+   {ctx.reply('Нет 10 буби у игрока (вертикаль)')}
+   for (let i = 0; i < 10; i++) {
        score_dealer = data.items.results[i].results.card_dealer.suit
        score_player = data.items.results[i].results.card_player.suit
        
@@ -177,9 +177,9 @@ bot.hears('/bot', async (ctx) => {
    
    }
    
-   if(mastvertPl2==8)
-   {ctx.reply('Нет 8 крестей у игрока (вертикаль)')}
-   for (let i = 0; i < 8; i++) {
+   if(mastvertPl2==10)
+   {ctx.reply('Нет 10 крестей у игрока (вертикаль)')}
+   for (let i = 0; i < 10; i++) {
        score_dealer = data.items.results[i].results.card_dealer.suit
        score_player = data.items.results[i].results.card_player.suit
        
@@ -188,9 +188,9 @@ bot.hears('/bot', async (ctx) => {
    
    }
    
-   if(mastvertPl3==8)
-   {ctx.reply('Нет 8 пик у игрока (вертикаль)')}
-   for (let i = 0; i < 8; i++) {
+   if(mastvertPl3==10)
+   {ctx.reply('Нет 10 пик у игрока (вертикаль)')}
+   for (let i = 0; i < 10; i++) {
        score_dealer = data.items.results[i].results.card_dealer.suit
        score_player = data.items.results[i].results.card_player.suit
        
@@ -198,9 +198,8 @@ bot.hears('/bot', async (ctx) => {
        mastvertPl4=mastvertPl4+1;
    
    }
-   console.log(mastvertPl4);
-   if(mastvertPl4==8)
-   {ctx.reply('Нет 8 чирв у игрока (вертикаль)')}
+   if(mastvertPl4==10)
+   {ctx.reply('Нет 10 чирв у игрока (вертикаль)')}
       
     }
     function good(){
@@ -215,7 +214,7 @@ good()}
 )
 bot.hears('/end', async (ctx) => {
    try {
-      clearInterval(time);
+      clearInterval(global.time);
   
       ctx.reply("Пока");  
     } catch(err) {
